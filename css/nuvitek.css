@@ -48,6 +48,8 @@ h3 {
 	transition: opacity 1s;
 }
 
+
+
 .btn {
 	display: inline-block;
 	vertical-align: top;
@@ -59,6 +61,20 @@ h3 {
 	margin: 20px 0 10px;
 	/* background-color: #d7df21; */
 }
+
+.btns {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #1cbdc0;
+	font: 14px/1 "PancettaSerifPro-Regular", sans-serif;
+	padding: 10px 20px 12px 20px;
+	border-radius: 4px;
+	color: #818285;
+	
+	/* background-color: #d7df21; */
+}
+
+
 .btn-sep {
 	display: inline-block;
 	vertical-align: top;
@@ -70,6 +86,20 @@ h3 {
 	margin: 20px 0 10px;
 	/* background-color: #d7df21; */
 }
+
+.btn-contact {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #fff;
+	font: 17px/1.7 "PancettaSerifPro-Italic", sans-serif;
+	
+	padding: 5px 10px 6px 10px;
+	border-radius: 4px;
+	color: #fff;
+	
+	/* background-color: #d7df21; */
+}
+
 .about-arrow-up, .about-arrow-bottom, .quote-arrow-up, .copy-arrow-up {
 	position: absolute;
 	left: 50%;
@@ -225,6 +255,15 @@ h3 {
 	text-align: center;
 	padding-bottom: 20px;
 }
+
+#services a:link {
+    text-decoration: none;
+}
+
+#services a:hover {
+    color: #1cbdc0 ;
+}
+
 
 #cloud {
 	background-color: #eff4f5;
@@ -391,6 +430,14 @@ h3 {
 
 #contact .lead-text {
 	padding-bottom: 20px;
+}
+
+#contact a:link {
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #d6da7e;
 }
 
 #headerBottom {
