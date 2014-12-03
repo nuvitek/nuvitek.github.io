@@ -78,7 +78,7 @@ h3 {
 .btn-sep {
 	display: inline-block;
 	vertical-align: top;
-	border: 1px solid #d6da7e;
+	border: 1px solid #fff;
 	font: 16px/1 "PancettaSerifPro-Regular", sans-serif;
 	padding: 10px 20px 12px 20px;
 	border-radius: 4px;
@@ -122,7 +122,7 @@ h3 {
 
 #service-divider {
 	position: relative;
-	background-color: #1cbdc0 ; /* #d4c730, e1e799 */
+	background-color: #7e958b; ; /* #d4c730, e1e799 */
 	padding: 25px 0;
 	text-align: center;
 	font: 17px/1.7 "PancettaSerifPro-Italic", sans-serif;
@@ -266,8 +266,8 @@ h3 {
 
 
 #cloud {
-	background-color: #eff4f5;
-	color: #818285;
+	
+	background-color: #fff;
 	text-align: center;
 }
 
@@ -286,7 +286,7 @@ h3 {
 
 #automation {
 	
-	color: #818285;
+	background-color: #fff;
 	text-align: center;
 }
 
@@ -304,8 +304,8 @@ h3 {
 }
 
 #transformation {
-	background-color: #eff4f5;
-	color: #818285;
+	
+	background-color: #fff;
 	text-align: center;
 }
 
@@ -324,7 +324,7 @@ h3 {
 
 #operations {
 
-	color: #818285;
+	background-color: #fff;
 	text-align: center;
 }
 
@@ -342,13 +342,12 @@ h3 {
 }
 
 #data {
-	background-color: #eff4f5;
-	color: #818285;
+	background-color: #fff;
 	text-align: center;
 }
 
 #data h2 {
-	color: #818285;
+color: #818285;	
 }
 
 #data .lead-text {
@@ -358,10 +357,11 @@ h3 {
 
 #data .section-text {
 	text-align: left;
+	
 }
 
 #servicemanagement {
-	color: #818285;
+	background-color: #fff;
 	text-align: center;
 }
 
