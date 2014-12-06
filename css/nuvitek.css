@@ -200,27 +200,12 @@ h3 {
 	padding-top: 2px;
 }
 
-.welcome-img, .welcome-img2, .welcome-img3, .welcome-img4, .welcome-img5, .welcome-img6, .welcome-img7, .welcome-img8 {
+.welcome-img {
 	background: url(../img/home.png) no-repeat center bottom;
 	display: block;
 	height: 350px;
 	background-size: contain;
 }
-
-.welcome-img2 {background-image: url(../img/home2.png)}
-
-.welcome-img3 {background-image: url(../img/home3.png)}
-
-.welcome-img4 {background-image: url(../img/home4.png)}
-
-.welcome-img5 {background-image: url(../img/home5-y.png)}
-
-.welcome-img6 {background-image: url(../img/home6-y.png)}
-
-.welcome-img7 {background-image: url(../img/home7-y6.png)}
-
-.welcome-img8 {background-image: url(../img/home8-y.png)}
-
 
 
 #about {
@@ -691,6 +676,7 @@ body>.navbar.open .patty:before {
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg)
 }
+
 */
 #pageslide {
 display: none;
