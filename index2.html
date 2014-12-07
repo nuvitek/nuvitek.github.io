@@ -603,7 +603,7 @@ Our services put technology to work for our customers and make them better at th
       </div>
 	  <div class="col-md-6 col-sm-6">
 	  
-	           <form class="form-horizontal" id="contactform" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+	           <form class="form-horizontal" id="contactform" target="_self" onsubmit="" action="">
 				
 	           <fieldset>
 	             <legend class="text-center"></legend>
@@ -657,7 +657,7 @@ Our services put technology to work for our customers and make them better at th
 			 <script type="text/javascript">
 			    
 				 
-			     function postContactToGoogle(){
+			     function postToGoogle(){
 			         var name = $('#name').val(); 
 			         var email = $('#email').val();
 					 var phone = $('#phone').val();
@@ -670,18 +670,10 @@ Our services put technology to work for our customers and make them better at th
 			                 dataType: "xml",
 			                 statusCode: {
 			                     0: function (){
- 
-			                         $('#name').val("");
-			                         $('#email').val("");
-									 $('#phone').val("");
-			                         $('#message').val("");
 			                         //Success message
 			                     },
 			                     200: function (){
-			                         $('#name').val("");
-			                         $('#email').val("");
-									 $('#phone').val("");
-			                         $('#message').val("");
+			                         
 			                         //Success Message
 			                     }
 			                 }
@@ -691,6 +683,13 @@ Our services put technology to work for our customers and make them better at th
 			             //Error message
 			         }
 			     }
+				 
+				 $(document).ready(function(){
+				                 $('#contactform').submit(function() {
+				                     postToGoogle();
+				                     return false;
+				                 });
+				             });
 			 </script>
 				 
 			 
