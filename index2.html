@@ -655,17 +655,14 @@ Our services put technology to work for our customers and make them better at th
 	         </div>
 			 
 			 <script type="text/javascript">
-			     function validateEmail(email) {
-			         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			         return re.test(email);
-			     }
+			    
 				 
 			     function postContactToGoogle(){
 			         var name = $('#name').val(); 
 			         var email = $('#email').val();
 					 var phone = $('#phone').val();
 			         var feed = $('#message').val();
-			         if ((name !== "") && (email !== "") && ((message !== "") && (validateEmail(email)))) {
+			         if ((name !== "") && (email !== "") && ((message !== "")) {
 			             $.ajax({
 			                 url: "https://docs.google.com/forms/d/10YVQR2MBn0aGWKMJPAs19mXNRDdxiDY-J8tAYQrkSoM/formResponse",
 			                 data: {"entry.1407281520" : name, "entry.1812949067" : email, "entry.2033205632" : phone,"entry.1309773188": message},
