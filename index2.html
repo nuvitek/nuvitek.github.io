@@ -658,14 +658,14 @@ Our services put technology to work for our customers and make them better at th
 			    
 				 
 			     function postToGoogle(){
-			         var name = $('#name').val(); 
-			         var email = $('#email').val();
-					 var phone = $('#phone').val();
-			         var feed = $('#message').val();
+			         var field1 = $('#name').val(); 
+			         var field2 = $('#email').val();
+					 var field3 = $('#phone').val();
+			         var field4 = $('#message').val();
 			         if ((name !== "") && (email !== "") && (message !== "")) {
 			             $.ajax({
 			                 url: "https://docs.google.com/forms/d/10YVQR2MBn0aGWKMJPAs19mXNRDdxiDY-J8tAYQrkSoM/formResponse",
-			                 data: {"entry.1407281520" : name, "entry.1812949067" : email, "entry.2033205632" : phone,"entry.1309773188": message},
+			                 data: {"entry.1407281520" : field1, "entry.1812949067" : field2, "entry.2033205632" : field3,"entry.1309773188": field4},
 			                 type: "POST",
 			                 dataType: "xml",
 			                 statusCode: {
