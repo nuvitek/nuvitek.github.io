@@ -648,16 +648,14 @@ Our services put technology to work for our customers and make them better at th
 	               </div>
 	             </div>
 	           </fieldset>
-			  	 		  <div style="width: 100%; display: block; float: right; padding-top: 15px;">
-			               <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
-			           </div>
+			  	 		  
 	           </form>
 	         </div>
 			 
 			 <script type="text/javascript">
 			    
 				 
-			     function postToGoogle(){
+			     function postGoogleContactForm(){
 			         var field1 = $('#name').val(); 
 			         var field2 = $('#email').val();
 					 var field3 = $('#phone').val();
@@ -670,12 +668,20 @@ Our services put technology to work for our customers and make them better at th
 			                 dataType: "xml",
 			                 statusCode: {
 			                     0: function (){
-			                         //Success message
+									 $('#name').val("");
+									 $('#email').val("");
+									 $('#phone').val("");
+									 $('#message').val("");
+			                         alert("Thank you for your interest in our services, we will be intouch with you shortly")//Success message
 									
 			                     },
 			                     200: function (){
 			                         
-			                         //Success Message
+									 $('#name').val("");
+									 $('#email').val("");
+									 $('#phone').val("");
+									 $('#message').val("");
+			                          alert("Thank you for your interest in our services, we will be intouch with you shortly")////Success Message
 			                     }
 			                 }
 			             });
@@ -684,7 +690,7 @@ Our services put technology to work for our customers and make them better at th
 				 
 				 $(document).ready(function(){
 				                 $('#contactform').submit(function() {
-				                     postToGoogle();
+				                     postGoogleContactForm();
 				                     return false;
 				                 });
 				             });
