@@ -11,11 +11,14 @@
 
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/jAlert-v2-min.css" rel="stylesheet">
+
+
 
 <!-- Custom styles for this template -->
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href="css/jquery.pageslide.css" rel="stylesheet">
-<link href="css/nuvitek.css" rel="stylesheet">
+<link href="css/nuvitek2.css" rel="stylesheet">
 
 <!-- Just for debugging purposes. Don't actually copy this line! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -25,6 +28,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script src='js/jAlert-v2-min.js'></script>
 </head>
 
 <body data-spy="scroll" data-target=".nuvinav" data-offset="156">
@@ -577,17 +582,14 @@ Our services put technology to work for our customers and make them better at th
       
 <section id="contact">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12"><h2>Get in Touch</h2>
-        <p class="lead-text">Feel free to contact us for any inquiries, if you have any questions about our services or just say hello.</p>
-      </div>
-    </div>
+	  
+    
     <div class="row">
       <div class="col-md-6 col-sm-6">
-          <div class="contacts"> <span class="contactico glyphicon glyphicon-comment pull-left"></span>
-            <div class="pull-left"><a href="https://docs.google.com/a/nuvitek.com/forms/d/10YVQR2MBn0aGWKMJPAs19mXNRDdxiDY-J8tAYQrkSoM/viewform" class="btn-contact">Contact Form</a> </div>
-            <div class="clearfix"></div>
-          </div>
+	      <div class="col-md-12"><h2>Get in Touch</h2>
+	        <p class="lead-text">Feel free to contact us for any inquiries, if you have any questions about our services or just say hello.</p>
+	      </div>
+          
         <div class="contacts"> <span class="contactico glyphicon glyphicon-map-marker pull-left"></span>
           <div class="pull-left">Nuvitek LLC <br>
 			  13800 Coppermine Rd. <br>
@@ -603,6 +605,114 @@ Our services put technology to work for our customers and make them better at th
           <div class="clearfix"></div>
         </div>
       </div>
+	  <div class="col-md-6 col-sm-6">
+	  
+	           <form class="form-horizontal" id="contactform" target="_self" onsubmit="" action="">
+				
+	           <fieldset>
+	             <legend class="text-center"></legend>
+    
+	             <!-- Name input-->
+	             <div class="form-group">
+	               <label class="col-md-3 control-label" for="name">Name</label>
+	               <div class="col-md-9">
+	                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+	               </div>
+	             </div>
+    
+	             <!-- Email input-->
+	             <div class="form-group">
+	               <label class="col-md-3 control-label" for="email">Your E-mail</label>
+	               <div class="col-md-9">
+	                 <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+	               </div>
+	             </div>
+    
+  			   <!-- Phone input-->
+    		   <div class="form-group">
+     			  <label class="col-md-3 control-label" for="phone">Your Phone Number</label>
+     			 <div class="col-md-9">
+        			 <input id="phone" name="phone" type="text" placeholder="Your Phone Number" class="form-control">
+      		     </div>
+   			  </div>
+	
+	
+	             <!-- Message body -->
+	             <div class="form-group">
+	               <label class="col-md-3 control-label" for="message">Your message</label>
+	               <div class="col-md-9">
+	                 <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+	               </div>
+	             </div>
+    
+	             <!-- Form actions -->
+	             <div class="form-group">
+	               <div class="col-md-12 text-right">
+	                 <button type="submit" class="btn btn-default btn-xs">Submit</button>
+	               </div>
+	             </div>
+	           </fieldset>
+			  	 		  
+	           </form>
+	         </div>
+			 
+			 <script type="text/javascript">
+			    
+				 
+			     function postGoogleContactForm(){
+			         var field1 = $('#name').val(); 
+			         var field2 = $('#email').val();
+					 var field3 = $('#phone').val();
+			         var field4 = $('#message').val();
+			        
+			             $.ajax({
+			                 url: "https://docs.google.com/forms/d/10YVQR2MBn0aGWKMJPAs19mXNRDdxiDY-J8tAYQrkSoM/formResponse",
+			                 data: {"entry.1407281520" : field1, "entry.1812949067" : field2, "entry.2033205632" : field3,"entry.1309773188": field4},
+			                 type: "POST",
+			                 dataType: "xml",
+			                 statusCode: {
+			                     0: function (){
+									 $('#name').val("");
+									 $('#email').val("");
+									 $('#phone').val("");
+									 $('#message').val("");
+									 $.fn.jAlert({
+									 	'title': 'Message Received',
+									 	'message': 'Thank you for your interest in our services, we will be intouch with you shortly'
+									 });
+			                        // alert("Thank you for your interest in our services, we will be intouch with you shortly");//Success message
+									 window.location.replace("#welcome");
+									
+			                     },
+			                     200: function (){
+			                         
+									 $('#name').val("");
+									 $('#email').val("");
+									 $('#phone').val("");
+									 $('#message').val("");
+									 $.fn.jAlert({
+									 	'title': 'Message Received',
+									 	'message': 'Thank you for your interest in our services, we will be intouch with you shortly'
+									 });
+									 //alert("Thank you for your interest in our services, we will be intouch with you shortly");////Success Message
+									 window.location.replace("#welcome");
+			                     }
+			                 }
+			             });
+			         }
+			         
+				 
+				 $(document).ready(function(){
+				                 $('#contactform').submit(function() {
+				                     postGoogleContactForm();
+				                     return false;
+				                 });
+				             });
+			 </script>
+				 
+			 
+			 
+			 
     </div>
   </div>
 </section>
@@ -619,7 +729,8 @@ Our services put technology to work for our customers and make them better at th
 <!-- Bootstrap core JavaScript
     ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+
+
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script> 
 <script src="js/jquery.localscroll-1.2.7-min.js"></script> 

@@ -408,8 +408,7 @@ color: #818285;
 }
 
 #contact {
-	background: url(../img/contact.png) no-repeat 80% bottom #5fc792; /* #1bbc9b;6fc5a2 */
-	color: #FFF;
+background: url(../img/contact.png) no-repeat 45% bottom #5fc792; /* #1bbc9b;6fc5a2 */	color: #FFF;
 	position: relative;
 }
 
@@ -421,6 +420,7 @@ color: #818285;
 #contact .lead-text {
 	padding-bottom: 20px;
 }
+
 
 #contact a:link {
     text-decoration: none;
