@@ -612,7 +612,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 	             <div class="form-group">
 	               <label class="col-md-3 control-label" for="name">Name</label>
 	               <div class="col-md-9">
-	                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control" data-error="Bruh, that email address is invalid" required> 
+	                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control" required> 
 	               </div>
 	             </div>
     
@@ -620,7 +620,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 	             <div class="form-group">
 	               <label class="col-md-3 control-label" for="email">Your E-mail</label>
 	               <div class="col-md-9">
-	                 <input id="email" name="email" type="email" placeholder="Your email" class="form-control" data-error="Bruh, that email address is invalid" required>
+	                 <input id="email" name="email" type="email" placeholder="Your email" class="form-control" required>
 	               </div>
 	             </div>
     
@@ -637,7 +637,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 	             <div class="form-group">
 	               <label class="col-md-3 control-label" for="message">Your message</label>
 	               <div class="col-md-9">
-	                 <textarea class="form-control" id="message" name="message" placeholder="Your message" rows="5"></textarea>
+	                 <textarea class="form-control" id="message" name="message" placeholder="Your message" rows="5" required></textarea>
 	               </div>
 	             </div>
     
@@ -674,7 +674,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 									 $('#message').val("");
 									 $.fn.jAlert({
 									 	'title': 'Message Not Received',
-									 	'message': 'Thank you for your interest in our services, we will be in touch with you shortly'
+									 	'message': 'Please fill out the required fields so we can get in tocuh with you'
 									 });
 			                        // alert("Thank you for your interest in our services, we will be in touch with you shortly");//Success message
 									 window.location.replace("#welcome");
