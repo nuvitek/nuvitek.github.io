@@ -546,6 +546,11 @@ background: url(../img/contact.png) no-repeat 45% bottom #5fc792; /* #1bbc9b;6fc
 	color: #1cbdc0;
 }
 
+.form-group.required .control-label:after { 
+   content:"*";
+   color:red;
+}
+
 body {
 	font-family: 'Lato', 'Galaxie', sans-serif;
 }
