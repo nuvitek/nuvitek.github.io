@@ -700,7 +700,8 @@ Nuvitek services put technology to work for our customers so that they can devot
 				 
 				 $(document).ready(function(){
 						 		
-				                 $('#contactform').submit(function() {
+					 			 $('#contactform').validator();
+								 $('#contactform').submit(function() {
 									 
 				                     postGoogleContactForm();
 				                     return false;
