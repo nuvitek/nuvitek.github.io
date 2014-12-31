@@ -603,7 +603,7 @@ Nuvitek services put technology to work for our customers so that they can devot
       </div>
 	  <div class="col-md-6 col-sm-6">
 	  
-	           <form class="form-horizontal" id="contactform" target="_self" onsubmit="" action="">
+	           <form data-toggle="validator" role="form" class="form-horizontal" id="contactform" target="_self" onsubmit="" action="">
 				
 	           <fieldset>
 	             <legend class="text-center"></legend>
@@ -612,7 +612,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 	             <div class="form-group">
 	               <label class="col-md-3 control-label" for="name">Name</label>
 	               <div class="col-md-9">
-	                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+	                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control" data-error="Bruh, that email address is invalid" required> 
 	               </div>
 	             </div>
     
@@ -620,7 +620,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 	             <div class="form-group">
 	               <label class="col-md-3 control-label" for="email">Your E-mail</label>
 	               <div class="col-md-9">
-	                 <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+	                 <input id="email" name="email" type="email" placeholder="Your email" class="form-control" data-error="Bruh, that email address is invalid" required>
 	               </div>
 	             </div>
     
@@ -654,7 +654,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 			 
 			 <script type="text/javascript">
 			    
-				 
+				
 			     function postGoogleContactForm(){
 			         var field1 = $('#name').val(); 
 			         var field2 = $('#email').val();
@@ -673,7 +673,7 @@ Nuvitek services put technology to work for our customers so that they can devot
 									 $('#phone').val("");
 									 $('#message').val("");
 									 $.fn.jAlert({
-									 	'title': 'Message Received',
+									 	'title': 'Message Not Received',
 									 	'message': 'Thank you for your interest in our services, we will be in touch with you shortly'
 									 });
 			                        // alert("Thank you for your interest in our services, we will be in touch with you shortly");//Success message
@@ -699,7 +699,9 @@ Nuvitek services put technology to work for our customers so that they can devot
 			         
 				 
 				 $(document).ready(function(){
+						 		
 				                 $('#contactform').submit(function() {
+									 
 				                     postGoogleContactForm();
 				                     return false;
 				                 });
@@ -734,5 +736,6 @@ Nuvitek services put technology to work for our customers so that they can devot
 <script src="js/jquery.pageslide-custom.js"></script> 
 <script src="js/custom.js"></script>
 <script src='js/jAlert-v2-min.js'></script>
+<script src='js/validator.min.js'></script>
 </body>
 </html>
