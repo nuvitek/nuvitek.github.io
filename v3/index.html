@@ -613,115 +613,109 @@ Nuvitek services put technology to work for our customers so that they can devot
       </div>
 	  <div class="col-md-6 col-sm-6">
 	  
-	           <form data-toggle="validator" role="form" class="form-horizontal" id="contactform" target="_self" onsubmit="" action="">
-				
-	           <fieldset>
-	             <legend class="text-center"></legend>
-    
-	             <!-- Name input-->
-	             <div class="form-group required">
-	               <label class="col-md-3 control-label" for="name">Name</label>
-	               <div class="col-md-9">
-	                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control" required> 
-	               </div>
-	             </div>
-    
-	             <!-- Email input-->
-	             <div class="form-group required">
-	               <label class="col-md-3 control-label" for="email">Your E-mail</label>
-	               <div class="col-md-9">
-	                 <input id="email" name="email" type="email" placeholder="Your email" class="form-control" required>
-	               </div>
-	             </div>
-    
-  			   <!-- Phone input-->
-    		   <div class="form-group">
-     			  <label class="col-md-3 control-label" for="phone">Your Phone Number</label>
-     			 <div class="col-md-9">
-        			 <input id="phone" name="phone" type="text" placeholder="Your Phone Number" class="form-control">
-      		     </div>
-   			  </div>
+			  <form class="form-horizontal" id="contactform" target="_self" onsubmit="" action="">
+			   <fieldset>
+			   <legend class="text-center"></legend>
+  			 	  <!-- Name input-->
+			    <div class="form-group required">
+			      <label class="col-md-3 control-label" for="name">Name</label>
+			      <div class="col-md-9">
+			        <input id="name" name="name" type="text" placeholder="Your name" class="form-control" required> 
+			      </div>
+			  </div>
 	
+			      <!-- Email input-->
+			      <div class="form-group required">
+			        <label class="col-md-3 control-label" for="email">Your E-mail</label>
+			        <div class="col-md-9">
+			          <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter a valid email address" placeholder="Your email" class="form-control" required>
+			        </div>
+			      </div>
 	
-	             <!-- Message body -->
-	             <div class="form-group required">
-	               <label class="col-md-3 control-label" for="message">Your message</label>
-	               <div class="col-md-9">
-	                 <textarea class="form-control" id="message" name="message" placeholder="Your message" rows="5" required></textarea>
-	               </div>
-	             </div>
-    
-	             <!-- Form actions -->
-	             <div class="form-group">
-	               <div class="col-md-12 text-right">
-	                 <button type="submit" class="btn btn-default btn-xs">Submit</button>
-	               </div>
-	             </div>
-	           </fieldset>
-			  	 		  
-	           </form>
+			     <!-- Phone input-->
+			     <div class="form-group">
+			  	  <label class="col-md-3 control-label" for="phone">Your Phone Number</label>
+			  	 <div class="col-md-9">
+			  		 <input id="phone" name="phone" type="tel" placeholder="Your Phone Number" class="form-control">
+			       </div>
+			    </div>
+	
+			      <!-- Message body -->
+			      <div class="form-group required">
+			        <label class="col-md-3 control-label" for="message">Your message</label>
+			        <div class="col-md-9">
+			          <textarea class="form-control" id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+			        </div>
+			      </div>
+			        <!-- Form actions -->
+			        <div class="form-group">
+			          <div class="col-md-12 text-right">
+			            <button type="submit" class="btn btn-default btn-xs">Submit</button>
+			          </div>
+			        </div>
+			      </fieldset>
+	
+			    </div>
+  
+			  </form>
 	         </div>
 			 
-			 <script type="text/javascript">
-			    
-				
-			     function postGoogleContactForm(){
-			         var field1 = $('#name').val(); 
-			         var field2 = $('#email').val();
-					 var field3 = $('#phone').val();
-			         var field4 = $('#message').val();
-			        
-			             $.ajax({
-			                 url: "https://docs.google.com/forms/d/10YVQR2MBn0aGWKMJPAs19mXNRDdxiDY-J8tAYQrkSoM/formResponse",
-			                 data: {"entry.1407281520" : field1, "entry.1812949067" : field2, "entry.2033205632" : field3,"entry.1309773188": field4},
-			                 type: "POST",
-			                 dataType: "xml",
-			                 statusCode: {
-			                     0: function (){
-									 $('#name').val("");
-									 $('#email').val("");
-									 $('#phone').val("");
-									 $('#message').val("");
-									 $.fn.jAlert({
-									 	'title': 'Message Received',
-									 	'message': 'Thank you for your interest in our services, we will be in touch with you shortly'
-									 });
-			                        // alert("Thank you for your interest in our services, we will be in touch with you shortly");//Success message
-									 window.location.replace("#contact");
-									
-			                     },
-			                     200: function (){
-			                         
-									 $('#name').val("");
-									 $('#email').val("");
-									 $('#phone').val("");
-									 $('#message').val("");
-									 $.fn.jAlert({
-									 	'title': 'Message Received',
-									 	'message': 'Thank you for your interest in our services, we will be in touch with you shortly'
-									 });
-									 //alert("Thank you for your interest in our services, we will be in touch with you shortly");////Success Message
-									 window.location.replace("#services");
-			                     }
-			                 }
-			             });
-			         }
-			         
-				 
-				 $(document).ready(function(){
-						 		
-					 			 $('#contactform').validator();
-								 $('#contactform').submit(function() {
-									 
-				                     postGoogleContactForm();
-				                     return false;
-				                 });
-				             });
-			 </script>
-				 
+		 <script type="text/javascript">
+		    
+			
+		     function postGoogleContactForm(){
+		         var field1 = $('#name').val(); 
+		         var field2 = $('#email').val();
+				 var field3 = $('#phone').val();
+		         var field4 = $('#message').val();
+		        
+		             $.ajax({
+		                 url: "https://docs.google.com/forms/d/10YVQR2MBn0aGWKMJPAs19mXNRDdxiDY-J8tAYQrkSoM/formResponse",
+		                 data: {"entry.1407281520" : field1, "entry.1812949067" : field2, "entry.2033205632" : field3,"entry.1309773188": field4},
+		                 type: "POST",
+		                 dataType: "xml",
+		                 statusCode: {
+		                     0: function (){
+								 $('#name').val("");
+								 $('#email').val("");
+								 $('#phone').val("");
+								 $('#message').val("");
+								 $.fn.jAlert({
+								 	'title': 'Message Received',
+								 	'message': 'Thank you for your interest in our services, we will be in touch with you shortly'
+								 });
+		                        // alert("Thank you for your interest in our services, we will be in touch with you shortly");//Success message
+								 window.location.replace("#services");
+								
+		                     },
+		                     200: function (){
+		                         
+								 $('#name').val("");
+								 $('#email').val("");
+								 $('#phone').val("");
+								 $('#message').val("");
+								 $.fn.jAlert({
+								 	'title': 'Message Received',
+								 	'message': 'Thank you for your interest in our services, we will be in touch with you shortly'
+								 });
+								 //alert("Thank you for your interest in our services, we will be in touch with you shortly");////Success Message
+								 window.location.replace("#services");
+		                     }
+		                 }
+		             });
+		         }
+		         
 			 
-			 
-			 
+			 $(document).ready(function(){
+					 		
+							 $('#contactform').submit(function() {
+								 
+			                     postGoogleContactForm();
+			                     return false;
+			                 });
+							}); 
+		 </script>
+						 
     </div>
   </div>
 </section>
@@ -747,6 +741,5 @@ Nuvitek services put technology to work for our customers so that they can devot
 <script src="js/jquery.pageslide-custom.js"></script> 
 <script src="js/custom.js"></script>
 <script src='js/jAlert-v2-min.js'></script>
-<script src='js/validator.min.js'></script>
 </body>
 </html>
