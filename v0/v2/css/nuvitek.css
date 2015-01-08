@@ -129,6 +129,24 @@ h3 {
 	
 }
 
+.fancybox-skin {
+	background: #818285; 
+	
+		
+}
+.fancybox-nav span {
+ visibility: visible;
+}
+
+.fancybox-next {
+    right: -60px;
+}
+
+.fancybox-prev {
+    left: -60px;
+}
+
+
 #service-divider a:link {
     text-decoration: none;
 }
@@ -171,8 +189,13 @@ h3 {
 	letter-spacing: -0.01em;
 }
 
-#welcome, #about, #services, #customers, #workwithus, #cloud, #automation, #transformation, #operations, #data, #servicemanagement, #contact {
+#welcome, #about, #services, #customers, #workwithus, #contact {
 	padding: 50px 0;
+	min-height: 400px;
+}
+
+#cloud, #automation, #transformation, #operations, #data, #servicemanagement {
+	padding: 25px 0;
 	min-height: 400px;
 }
 
@@ -206,6 +229,7 @@ h3 {
 	height: 350px;
 	background-size: contain;
 }
+
 
 
 #about {
@@ -460,6 +484,8 @@ background: url(../img/contact.png) no-repeat 45% bottom #5fc792; /* #1bbc9b;6fc
 
 .circol.glyphicon-hdd, .circol.glyphicon-plane, .circol.glyphicon-stats { line-height: 60px;}
 
+
+
 .circol.glyphicon-hdd { font-size: 32px; }
 
 .circo1, .circo2, .circo3, .circo4, .circo5, .circo6 {
@@ -473,7 +499,6 @@ background: url(../img/contact.png) no-repeat 45% bottom #5fc792; /* #1bbc9b;6fc
 	color: #fff;
 	font-size: 40px;
 }
-
 .circo1 {
 	background-color: #6cb65f;
 }
@@ -544,11 +569,6 @@ background: url(../img/contact.png) no-repeat 45% bottom #5fc792; /* #1bbc9b;6fc
 
 .nav>li.active>a {
 	color: #1cbdc0;
-}
-
-.form-group.required.control-label:after { 
-   content:"*";
-   color:red;
 }
 
 body {
